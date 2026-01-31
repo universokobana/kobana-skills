@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "kobana-skills",
+      "name": "kobana-agent-skills",
       "description": "Kobana financial automation skills for Pix charges, bank slips, and payment processing",
       "source": "./",
       "strict": false,

@@ -37,7 +37,7 @@ This repository contains Kobana's official skills for financial automation with 
 
 - [./skills](./skills): Kobana financial automation skills
 - [./spec](./spec): The Agent Skills specification
-  - [Kobana Skills Structure](./spec/kobana-skills-structure.md): Standard structure for API and MCP-based skills
+  - [Kobana Agent Skills Structure](./spec/kobana-agent-skills-structure.md): Standard structure for API and MCP-based skills
 - [./template](./template): Skill template
 
 # Try in Claude Code, Claude.ai, and the API
@@ -46,18 +46,18 @@ This repository contains Kobana's official skills for financial automation with 
 
 You can register this repository as a Claude Code Plugin marketplace by running the following command in Claude Code:
 ```
-/plugin marketplace add kobana/kobana-skills
+/plugin marketplace add kobana/kobana-agent-skills
 ```
 
 Then, to install the Kobana skills:
 1. Select `Browse and install plugins`
 2. Select `kobana-agent-skills`
-3. Select `kobana-skills`
+3. Select `kobana-agent-skills`
 4. Select `Install now`
 
 Alternatively, directly install via:
 ```
-/plugin install kobana-skills@kobana-agent-skills
+/plugin install kobana-agent-skills@kobana-agent-skills
 ```
 
 After installing the plugin, you can use the skill by just mentioning it. For example:

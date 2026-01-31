@@ -45,18 +45,18 @@ A [Kobana](https://www.kobana.com.br) é uma plataforma de automação financeir
 
 Você pode registrar este repositório como um marketplace de plugins do Claude Code executando o seguinte comando:
 ```
-/plugin marketplace add kobana/kobana-skills
+/plugin marketplace add kobana/kobana-agent-skills
 ```
 
 Então, para instalar as skills da Kobana:
 1. Selecione `Browse and install plugins`
 2. Selecione `kobana-agent-skills`
-3. Selecione `kobana-skills`
+3. Selecione `kobana-agent-skills`
 4. Selecione `Install now`
 
 Alternativamente, instale diretamente via:
 ```
-/plugin install kobana-skills@kobana-agent-skills
+/plugin install kobana-agent-skills@kobana-agent-skills
 ```
 
 Após instalar o plugin, você pode usar a skill apenas mencionando-a. Por exemplo:

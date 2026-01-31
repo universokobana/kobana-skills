@@ -5,7 +5,7 @@ This repository contains Kobana's official skills for financial automation with 
 ## Repository Structure
 
 ```
-kobana-skills/
+kobana-agent-skills/
 ├── skills/
 │   ├── api-charge-pix/       # Pix charges via REST API
 │   ├── mcp-charge-pix/       # Pix charges via MCP Server
@@ -14,14 +14,14 @@ kobana-skills/
 │   ├── api-payment-pix/      # Pix payments via REST API
 │   └── mcp-payment-pix/      # Pix payments via MCP Server
 ├── spec/                     # Agent Skills specification
-│   └── kobana-skills-structure.md  # Standard structure for new skills
+│   └── kobana-agent-skills-structure.md  # Standard structure for new skills
 └── template/                 # Skill template
 ```
 
 ## Creating New Skills
 
 For developing new Kobana skills, follow the standard structure documented in:
-- **Structure Guide**: `spec/kobana-skills-structure.md`
+- **Structure Guide**: `spec/kobana-agent-skills-structure.md`
 
 This guide includes:
 - Directory structure for API-based and MCP-based skills
