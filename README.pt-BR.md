@@ -26,6 +26,8 @@ A [Kobana](https://www.kobana.com.br) é uma plataforma de automação financeir
 |-------|-----------|
 | [api-charge-pix](./skills/api-charge-pix) | Criar e gerenciar cobranças Pix usando a API REST da Kobana |
 | [mcp-charge-pix](./skills/mcp-charge-pix) | Criar e gerenciar cobranças Pix usando o servidor MCP kobana-mcp-charge |
+| [api-transfer-pix](./skills/api-transfer-pix) | Criar e gerenciar transferências Pix usando a API REST da Kobana |
+| [mcp-transfer-pix](./skills/mcp-transfer-pix) | Criar e gerenciar transferências Pix usando o servidor MCP kobana-mcp-transfer |
 
 ## Aviso Legal
 
@@ -60,6 +62,8 @@ Alternativamente, instale diretamente via:
 Após instalar o plugin, você pode usar a skill apenas mencionando-a. Por exemplo:
 - "Use a skill api-charge-pix para criar uma cobrança Pix de R$ 100,00"
 - "Use a skill mcp-charge-pix para listar minhas contas Pix"
+- "Use a skill api-transfer-pix para enviar uma transferência Pix de R$ 500,00"
+- "Use a skill mcp-transfer-pix para criar um lote de transferências"
 
 ## Claude.ai
 
@@ -72,6 +76,11 @@ Você pode usar skills pré-construídas e fazer upload de skills personalizadas
 # Criando uma Skill Básica
 
 Skills são simples de criar - apenas uma pasta com um arquivo `SKILL.md` contendo frontmatter YAML e instruções. Você pode usar o **template** neste repositório como ponto de partida:
+
+> **Importante:** Ao criar ou remover skills, você deve atualizar os seguintes arquivos:
+> - `.claude-plugin/marketplace.json` - Registrar/desregistrar a skill no array `plugins[0].skills`
+> - `README.md` e `README.pt-BR.md` - Atualizar a tabela "Skills Disponíveis"
+> - `CLAUDE.md` - Atualizar as seções de estrutura do repositório e skills disponíveis
 
 ```markdown
 ---

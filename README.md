@@ -26,6 +26,8 @@ This repository contains Kobana's official skills for financial automation with 
 |-------|-------------|
 | [api-charge-pix](./skills/api-charge-pix) | Create and manage Pix charges using Kobana REST API |
 | [mcp-charge-pix](./skills/mcp-charge-pix) | Create and manage Pix charges using kobana-mcp-charge MCP server |
+| [api-transfer-pix](./skills/api-transfer-pix) | Create and manage Pix transfers using Kobana REST API |
+| [mcp-transfer-pix](./skills/mcp-transfer-pix) | Create and manage Pix transfers using kobana-mcp-transfer MCP server |
 
 ## Disclaimer
 
@@ -61,6 +63,8 @@ Alternatively, directly install via:
 After installing the plugin, you can use the skill by just mentioning it. For example:
 - "Use the api-charge-pix skill to create a Pix charge of R$ 100.00"
 - "Use the mcp-charge-pix skill to list my Pix accounts"
+- "Use the api-transfer-pix skill to send a Pix transfer of R$ 500.00"
+- "Use the mcp-transfer-pix skill to create a transfer batch"
 
 ## Claude.ai
 
@@ -73,6 +77,11 @@ You can use pre-built skills, and upload custom skills, via the Claude API. See 
 # Creating a Basic Skill
 
 Skills are simple to create - just a folder with a `SKILL.md` file containing YAML frontmatter and instructions. You can use the **template** in this repository as a starting point:
+
+> **Important:** When creating or removing skills, you must update the following files:
+> - `.claude-plugin/marketplace.json` - Register/unregister the skill in the `plugins[0].skills` array
+> - `README.md` and `README.pt-BR.md` - Update the "Available Skills" table
+> - `CLAUDE.md` - Update the repository structure and available skills sections
 
 ```markdown
 ---
