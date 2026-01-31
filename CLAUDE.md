@@ -27,6 +27,8 @@ This guide includes:
 - Naming conventions
 - Checklist for new skill development
 
+**IMPORTANT**: When creating or removing skills, you MUST update the `.claude-plugin/marketplace.json` file to register/unregister the skill in the `plugins[0].skills` array.
+
 ## Available Skills
 
 ### api-charge-pix
