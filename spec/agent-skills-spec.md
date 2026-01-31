@@ -1,3 +1,5 @@
+*[Leia em Português](agent-skills-spec.pt-BR.md)*
+
 # Agent Skills Specification
 
 > The complete format specification for Agent Skills.

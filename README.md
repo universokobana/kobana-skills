@@ -1,3 +1,5 @@
+*[Leia em Português](README.pt-BR.md)*
+
 > **Note:** This repository is a fork of [Anthropic's skills repository](https://github.com/anthropics/skills), adapted for [Kobana](https://ai.kobana.com.br) - a financial automation platform with native AI. For information about the Agent Skills standard, see [agentskills.io](http://agentskills.io).
 
 # Skills
