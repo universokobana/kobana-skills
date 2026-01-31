@@ -35,6 +35,7 @@ This repository contains Kobana's official skills for financial automation with 
 
 - [./skills](./skills): Kobana financial automation skills
 - [./spec](./spec): The Agent Skills specification
+  - [Kobana Skills Structure](./spec/kobana-skills-structure.md): Standard structure for API and MCP-based skills
 - [./template](./template): Skill template
 
 # Try in Claude Code, Claude.ai, and the API

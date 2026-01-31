@@ -10,8 +10,20 @@ kobana-skills/
 │   ├── api-charge-pix/       # Pix charges via REST API
 │   └── mcp-charge-pix/       # Pix charges via MCP Server
 ├── spec/                     # Agent Skills specification
+│   └── kobana-skills-structure.md  # Standard structure for new skills
 └── template/                 # Skill template
 ```
+
+## Creating New Skills
+
+For developing new Kobana skills, follow the standard structure documented in:
+- **Structure Guide**: `spec/kobana-skills-structure.md`
+
+This guide includes:
+- Directory structure for API-based and MCP-based skills
+- Templates for SKILL.md and REFERENCE.md
+- Naming conventions
+- Checklist for new skill development
 
 ## Available Skills
 
