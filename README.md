@@ -14,48 +14,54 @@ For more information, check out:
 
 # About This Repository
 
-This repository contains skills that demonstrate what's possible with Claude's skills system. These skills range from creative applications (art, music, design) to technical tasks (testing web apps, MCP server generation) to enterprise workflows (communications, branding, etc.).
-
-Each skill is self-contained in its own folder with a `SKILL.md` file containing the instructions and metadata that Claude uses. Browse through these skills to get inspiration for your own skills or to understand different patterns and approaches.
+This repository contains Kobana's official skills for financial automation with Claude. These skills help you interact with Kobana's APIs and MCP servers for Pix charges, payments, and financial operations.
 
 ## About Kobana
 
 [Kobana](https://www.kobana.com.br) is a financial automation platform that connects businesses to over 40 Brazilian banks through a unified API. With more than R$ 50 billion in processed transactions and 5+ million monthly banking operations, Kobana offers payment, collection, and transfer solutions with native AI integration.
 
+## Available Skills
+
+| Skill | Description |
+|-------|-------------|
+| [api-charge-pix](./skills/api-charge-pix) | Create and manage Pix charges using Kobana REST API |
+| [mcp-charge-pix](./skills/mcp-charge-pix) | Create and manage Pix charges using kobana-mcp-charge MCP server |
+
 ## Disclaimer
 
-**These skills are provided for demonstration and educational purposes only.** While some of these capabilities may be available in Claude, the implementations and behaviors you receive from Claude may differ from what is shown in these skills. These skills are meant to illustrate patterns and possibilities. Always test skills thoroughly in your own environment before relying on them for critical tasks.
+**These skills are provided for demonstration and educational purposes only.** Always test skills thoroughly in your own environment before relying on them for critical tasks.
 
-# Skill Sets
-- [./skills](./skills): Skill examples for Creative & Design, Development & Technical, Enterprise & Communication, and Document Skills
+# Repository Structure
+
+- [./skills](./skills): Kobana financial automation skills
 - [./spec](./spec): The Agent Skills specification
 - [./template](./template): Skill template
 
 # Try in Claude Code, Claude.ai, and the API
 
 ## Claude Code
+
 You can register this repository as a Claude Code Plugin marketplace by running the following command in Claude Code:
 ```
 /plugin marketplace add kobana/kobana-skills
 ```
 
-Then, to install a specific set of skills:
+Then, to install the Kobana skills:
 1. Select `Browse and install plugins`
 2. Select `kobana-agent-skills`
-3. Select `document-skills` or `example-skills`
+3. Select `kobana-skills`
 4. Select `Install now`
 
-Alternatively, directly install either Plugin via:
+Alternatively, directly install via:
 ```
-/plugin install document-skills@kobana-agent-skills
-/plugin install example-skills@kobana-agent-skills
+/plugin install kobana-skills@kobana-agent-skills
 ```
 
-After installing the plugin, you can use the skill by just mentioning it. For instance, if you install the `document-skills` plugin from the marketplace, you can ask Claude Code to do something like: "Use the PDF skill to extract the form fields from `path/to/some-file.pdf`"
+After installing the plugin, you can use the skill by just mentioning it. For example:
+- "Use the api-charge-pix skill to create a Pix charge of R$ 100.00"
+- "Use the mcp-charge-pix skill to list my Pix accounts"
 
 ## Claude.ai
-
-These example skills are all already available to paid plans in Claude.ai.
 
 To use any skill from this repository or upload custom skills, follow the instructions in [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude#h_a4222fa77b).
 
@@ -65,7 +71,7 @@ You can use pre-built skills, and upload custom skills, via the Claude API. See 
 
 # Creating a Basic Skill
 
-Skills are simple to create - just a folder with a `SKILL.md` file containing YAML frontmatter and instructions. You can use the **template-skill** in this repository as a starting point:
+Skills are simple to create - just a folder with a `SKILL.md` file containing YAML frontmatter and instructions. You can use the **template** in this repository as a starting point:
 
 ```markdown
 ---
@@ -91,3 +97,11 @@ The frontmatter requires only two fields:
 - `description` - A complete description of what the skill does and when to use it
 
 The markdown content below contains the instructions, examples, and guidelines that Claude will follow. For more details, see [How to create custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills).
+
+# Additional Resources
+
+- [Kobana Website](https://www.kobana.com.br)
+- [Kobana AI](https://ai.kobana.com.br)
+- [Kobana API Documentation](https://developers.kobana.com.br)
+- [Kobana MCP Servers](https://github.com/universokobana/kobana-mcp-servers)
+- [Kobana API Specs](https://github.com/universokobana/kobana-api-specs)

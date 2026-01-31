@@ -1,3 +1,5 @@
+*[Read in English](README.md)*
+
 > **Nota:** Este repositório é um fork do [repositório de skills da Anthropic](https://github.com/anthropics/skills), adaptado para a [Kobana](https://ai.kobana.com.br) - plataforma de automação financeira com IA nativa. Para informações sobre o padrão Agent Skills, veja [agentskills.io](http://agentskills.io).
 
 # Skills
@@ -12,48 +14,54 @@ Para mais informações:
 
 # Sobre Este Repositório
 
-Este repositório contém skills que demonstram o que é possível com o sistema de skills do Claude. As skills variam desde aplicações criativas (arte, música, design) até tarefas técnicas (testes de web apps, geração de servidores MCP) e workflows empresariais (comunicações, branding, etc.).
-
-Cada skill é auto-contida em sua própria pasta com um arquivo `SKILL.md` contendo as instruções e metadados que o Claude utiliza. Navegue por estas skills para se inspirar ou para entender diferentes padrões e abordagens.
+Este repositório contém as skills oficiais da Kobana para automação financeira com Claude. Estas skills ajudam você a interagir com as APIs e servidores MCP da Kobana para cobranças Pix, pagamentos e operações financeiras.
 
 ## Sobre a Kobana
 
-A [Kobana](https://ai.kobana.com.br) é uma plataforma de automação financeira que conecta empresas a mais de 40 bancos brasileiros através de uma API unificada. Com mais de R$ 50 bilhões em transações processadas e 5+ milhões de operações bancárias mensais, a Kobana oferece soluções de recebimento, pagamento e transferência com IA nativa integrada.
+A [Kobana](https://www.kobana.com.br) é uma plataforma de automação financeira que conecta empresas a mais de 40 bancos brasileiros através de uma API unificada. Com mais de R$ 50 bilhões em transações processadas e 5+ milhões de operações bancárias mensais, a Kobana oferece soluções de recebimento, pagamento e transferência com IA nativa integrada.
+
+## Skills Disponíveis
+
+| Skill | Descrição |
+|-------|-----------|
+| [api-charge-pix](./skills/api-charge-pix) | Criar e gerenciar cobranças Pix usando a API REST da Kobana |
+| [mcp-charge-pix](./skills/mcp-charge-pix) | Criar e gerenciar cobranças Pix usando o servidor MCP kobana-mcp-charge |
 
 ## Aviso Legal
 
-**Estas skills são fornecidas para fins de demonstração e educacionais.** Embora algumas dessas capacidades possam estar disponíveis no Claude, as implementações e comportamentos podem diferir do que é mostrado nestas skills. Estas skills servem para ilustrar padrões e possibilidades. Sempre teste as skills completamente em seu próprio ambiente antes de depender delas para tarefas críticas.
+**Estas skills são fornecidas para fins de demonstração e educacionais.** Sempre teste as skills completamente em seu próprio ambiente antes de depender delas para tarefas críticas.
 
-# Conjuntos de Skills
-- [./skills](./skills): Exemplos de skills para Criativo & Design, Desenvolvimento & Técnico, Empresarial & Comunicação, e Skills de Documentos
+# Estrutura do Repositório
+
+- [./skills](./skills): Skills de automação financeira da Kobana
 - [./spec](./spec): Especificação do Agent Skills
 - [./template](./template): Template de skill
 
 # Use no Claude Code, Claude.ai e na API
 
 ## Claude Code
+
 Você pode registrar este repositório como um marketplace de plugins do Claude Code executando o seguinte comando:
 ```
 /plugin marketplace add kobana/kobana-skills
 ```
 
-Então, para instalar um conjunto específico de skills:
+Então, para instalar as skills da Kobana:
 1. Selecione `Browse and install plugins`
 2. Selecione `kobana-agent-skills`
-3. Selecione `document-skills` ou `example-skills`
+3. Selecione `kobana-skills`
 4. Selecione `Install now`
 
 Alternativamente, instale diretamente via:
 ```
-/plugin install document-skills@kobana-agent-skills
-/plugin install example-skills@kobana-agent-skills
+/plugin install kobana-skills@kobana-agent-skills
 ```
 
-Após instalar o plugin, você pode usar a skill apenas mencionando-a. Por exemplo, se você instalar o plugin `document-skills` do marketplace, você pode pedir ao Claude Code algo como: "Use a skill de PDF para extrair os campos de formulário de `caminho/para/arquivo.pdf`"
+Após instalar o plugin, você pode usar a skill apenas mencionando-a. Por exemplo:
+- "Use a skill api-charge-pix para criar uma cobrança Pix de R$ 100,00"
+- "Use a skill mcp-charge-pix para listar minhas contas Pix"
 
 ## Claude.ai
-
-Estas skills de exemplo já estão disponíveis para planos pagos no Claude.ai.
 
 Para usar qualquer skill deste repositório ou fazer upload de skills personalizadas, siga as instruções em [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude#h_a4222fa77b).
 
@@ -63,7 +71,7 @@ Você pode usar skills pré-construídas e fazer upload de skills personalizadas
 
 # Criando uma Skill Básica
 
-Skills são simples de criar - apenas uma pasta com um arquivo `SKILL.md` contendo frontmatter YAML e instruções. Você pode usar o **template-skill** neste repositório como ponto de partida:
+Skills são simples de criar - apenas uma pasta com um arquivo `SKILL.md` contendo frontmatter YAML e instruções. Você pode usar o **template** neste repositório como ponto de partida:
 
 ```markdown
 ---
@@ -88,4 +96,12 @@ O frontmatter requer apenas dois campos:
 - `name` - Um identificador único para sua skill (minúsculas, hífens para espaços)
 - `description` - Uma descrição completa do que a skill faz e quando usá-la
 
-O conteúdo markdown abaixo contém as instruções, exemplos e diretrizes que o Claude seguirá. Para mais detalhes, veja [Como criar skills customizadas (en)](https://support.claude.com/en/articles/12512198-creating-custom-skills).
+O conteúdo markdown contém as instruções, exemplos e diretrizes que o Claude seguirá. Para mais detalhes, veja [How to create custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills).
+
+# Recursos Adicionais
+
+- [Site da Kobana](https://www.kobana.com.br)
+- [Kobana AI](https://ai.kobana.com.br)
+- [Documentação da API Kobana](https://developers.kobana.com.br)
+- [Servidores MCP da Kobana](https://github.com/universokobana/kobana-mcp-servers)
+- [Especificações da API Kobana](https://github.com/universokobana/kobana-api-specs)
